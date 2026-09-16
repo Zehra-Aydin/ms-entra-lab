@@ -15,7 +15,8 @@ JWKS_URL = "https://login.microsoftonline.com/a5c0f00c-1e40-41ef-ab28-b6412a6679
 
 API_AUDIENCE = "api://4fa3c2d0-7cfc-44f8-b3ef-98e62b50a762"
 
-# - - - - - - - - - - - - - - - - - - - - - - - -
+#-------------------------------------------------------------
+
 TEST_PRIVATE_KEY = rsa.generate_private_key(
     public_exponent=65537,
     key_size=2048
@@ -35,6 +36,7 @@ app.add_middleware(
     allow_headers=["*"], #Risk ?
 )
 
+#-------------------------------------------------------------
 
 def validate_access_token(token: str):
 

@@ -19,7 +19,26 @@
         Microsoft Entra ID · OAuth 2.0 · OpenID Connect · FastAPI
     </p>
 
+    <div class="description">
+        <p>
 
+            1. Durch einen erfolgreichen Login stellt Microsoft Entra ID dem Benutzer zwei Access Token aus.
+            <br>
+            2. mit dem einen Token kann der Nutzer auf Ressourcen der Microsoft Graph API zugreifen,
+            hier bekommt er seinen Namen, Benutzernamen und seine E-Mail-Adresse angezeigt.
+
+            <br>
+            3. Das andere Access Token wird an die FastAPI gesendet und dort validiert.
+            Die FastAPI prüft, ob das Token gültig ist und die richtigen Berechtigungen enthält.
+
+            <br>
+            4. Mit dem anderen Token kann der Nutzer auf die geschützte Ressource der FastAPI API zugreifen.
+            Dazu wird das Access Token von der FastAPI API validiert, ob es gültig ist und die richtigen
+            Berechtigungen enthält.
+            <br>
+
+        </p>
+    </div>
     <div class="grid">
 
         <!-- 1. Authentcation -->
